@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "id": "bobberbegone",
+  "version": "${version}",
+
+  "name": "Bobber Begone",
+  "description": "A simple fabric client mod that removes the bobber overlay when hooked",
+  "authors": [
+    "nu11une"
+  ],
+  "contact": {
+    "homepage": "https://www.curseforge.com/minecraft/mc-mods/bobber-begone",
+    "sources": "https://github.com/FabricMC/fabric-example-mod"
+  },
+
+  "license": "Apache-2.0",
+  "icon": "assets/bobberbegone/bobberbegone.png",
+
+  "environment": "*",
+  "entrypoints": {
+    "client": [
+      "net.nu11une.bobberbegone.BobberBegone"
+    ]
+  },
+  "mixins": [
+    "bobberbegone.mixins.json"
+  ],
+
+  "depends": {
+    "fabricloader": ">=0.14.6",
+    "fabric": "*",
+    "minecraft": ">=1.18",
+    "java": ">=17"
+  },
+  "suggests": {
+    "another-mod": "*"
+  }
+}
