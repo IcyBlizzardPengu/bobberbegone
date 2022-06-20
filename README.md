@@ -1,0 +1,2 @@
+# Bobber Begone <img src="https://media.discordapp.net/attachments/597633988802117642/988575633498062848/bobberbegone.png" align="right" width="160"/>
+A simple fabric 1.18/1.19 client mod that removes the bobber render when hooked
