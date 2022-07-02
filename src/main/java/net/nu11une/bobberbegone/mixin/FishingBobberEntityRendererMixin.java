@@ -15,7 +15,7 @@ public class FishingBobberEntityRendererMixin {
 	@Inject(at = @At("HEAD"), method = "render(Lnet/minecraft/entity/projectile/FishingBobberEntity;FFLnet/minecraft/client/util/math/MatrixStack;Lnet/minecraft/client/render/VertexConsumerProvider;I)V", cancellable = true)
 	public void renderCallback(FishingBobberEntity fishingBobberEntity, float f, float g, MatrixStack matrixStack, VertexConsumerProvider vertexConsumerProvider, int i, CallbackInfo ci) {
 		PlayerEntity player = MinecraftClient.getInstance().player;
-		if ((MinecraftClient.getInstance().options == null || MinecraftClient.getInstance().options.getPerspective().isFirstPerson()) && fishingBobberEntity.getHookedEntity() == player) {
+		if ((MinecraftClient.getInstance().options == null || MinecraftClient.getInstance().options.perspective <= 0) && fishingBobberEntity.hookedEntity == player) {
 			ci.cancel();
 		}
 	}
